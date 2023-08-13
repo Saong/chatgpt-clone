@@ -60,13 +60,14 @@ const SideBar = () => {
           <div className='nav__icons'>
             <MdAdd />
           </div>
-          <h1 className={`${!open && 'hidden'}`}>New chat</h1>
+          <h1 className={`${!open && 'hidden'}`}>创建会话</h1>
         </span>
       </div>
 
       <div className='nav__bottom'>
         <DarkMode open={open} />
-        <div className='nav'>
+
+        <div className='nav' style={{display: 'none'}}>
           <a
             href='https://www.buymeacoffee.com/eyuel'
             rel='noreferrer'
@@ -78,7 +79,7 @@ const SideBar = () => {
             <h1 className={`${!open && 'hidden'}`}>Support this project</h1>
           </a>
         </div>
-        <div className='nav'>
+        <div className='nav' style={{display: 'none'}}>
           <a
             rel='noreferrer'
             target='_blank'
@@ -90,7 +91,7 @@ const SideBar = () => {
             <h1 className={`${!open && 'hidden'}`}>Clone on Github</h1>
           </a>
         </div>
-        <div onClick={() => setModalOpen(true)} className='nav'>
+        <div onClick={() => setModalOpen(true)} className='nav'  style={{display: 'none'}}>
           <span htmlFor='setting-modal' className='nav__item'>
             <div className='nav__icons'>
               <MdOutlineVpnKey />

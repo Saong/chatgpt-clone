@@ -56,7 +56,10 @@ const ChatView = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
 
-    const key = window.localStorage.getItem('api-key');
+    // openai apikey
+    // window.localStorage.getItem('api-key')
+    // const key = window.localStorage.getItem('api-key');
+    const key = "ba3825dd65184b73a9905c3ef503032d"
     if (!key) {
       setModalOpen(true);
       return;
@@ -82,7 +85,8 @@ const ChatView = () => {
         data && updateMessage(data, true, aiModel);
       } else {
         const response = await dalle(cleanPrompt, key);
-        const data = response.data.data[0].url;
+        const data = response.data[0].url;
+        console.log(response)
         data && updateMessage(data, true, aiModel);
       }
     } catch (err) {

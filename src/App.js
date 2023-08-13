@@ -9,7 +9,10 @@ const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    const apiKey = window.localStorage.getItem('api-key');
+    // const apiKey = window.localStorage.getItem('api-key');
+    // const apiKey = "ba3825dd65184b73a9905c3ef503032d"
+    // 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
+    const apiKey = "ba3825dd65184b73a9905c3ef503032d"
     if (!apiKey) {
       setModalOpen(true);
     }

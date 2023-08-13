@@ -50,7 +50,7 @@ const ChatMessage = (props) => {
 
           <div
             className={`${ai ? 'text-left' : 'text-right'} message__createdAt`}>
-            {moment(createdAt).calendar()}
+            {moment(createdAt).format("YYYY-MM-DD HH:mm:ss")}
           </div>
         </div>
       )}

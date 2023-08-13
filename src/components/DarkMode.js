@@ -22,14 +22,14 @@ const DarkMode = (props) => {
             <div className="nav__icons">
               <MdOutlineWbSunny />
             </div>
-            <h1 className={`${!props.open && "hidden"}`}>Light mode</h1>
+            <h1 className={`${!props.open && "hidden"}`}>日间模式</h1>
           </>
         ) : (
           <>
             <div className="nav__icons">
               <MdOutlineNightlight />
             </div>
-            <h1 className={`${!props.open && "hidden"}`}>Night mode</h1>
+            <h1 className={`${!props.open && "hidden"}`}>夜间模式</h1>
           </>
         )}
 
