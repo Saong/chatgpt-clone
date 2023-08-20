@@ -3,7 +3,7 @@ import { checkApiKey } from '../utils/checkKeys';
 
 const Setting = ({ modalOpen, setModalOpen }) => {
   // const apiKey = window.localStorage.getItem('api-key') || '';
-  const apiKey = "ba3825dd65184b73a9905c3ef503032d"
+  const apiKey = "ced87173f2f2492fb0cd7a9b6dd66d60"
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [input, setInput] = useState('');

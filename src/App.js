@@ -10,9 +10,9 @@ const App = () => {
 
   useEffect(() => {
     // const apiKey = window.localStorage.getItem('api-key');
-    // const apiKey = "ba3825dd65184b73a9905c3ef503032d"
+    // const apiKey = "ced87173f2f2492fb0cd7a9b6dd66d60"
     // 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
-    const apiKey = "ba3825dd65184b73a9905c3ef503032d"
+    const apiKey = "ced87173f2f2492fb0cd7a9b6dd66d60"
     if (!apiKey) {
       setModalOpen(true);
     }

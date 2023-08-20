@@ -32,7 +32,7 @@ export const davinci = async (prompt, key) => {
   // });
 
 
-  const url = 'https://openai-elser.openai.azure.com/openai/deployments/gpt-35-turbo-elser/chat/completions';
+  const url = 'https://openai-elser-eus2.openai.azure.com/openai/deployments/gpt4-elser/chat/completions';
 
   const apiVersion = '2023-03-15-preview';
 

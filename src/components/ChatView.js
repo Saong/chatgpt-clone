@@ -59,7 +59,7 @@ const ChatView = () => {
     // openai apikey
     // window.localStorage.getItem('api-key')
     // const key = window.localStorage.getItem('api-key');
-    const key = "ba3825dd65184b73a9905c3ef503032d"
+    const key = "ced87173f2f2492fb0cd7a9b6dd66d60"
     if (!key) {
       setModalOpen(true);
       return;
