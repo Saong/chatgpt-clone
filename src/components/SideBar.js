@@ -43,7 +43,7 @@ const SideBar = () => {
           </span>
         </div>
         <h1 className={`sidebar__app-title ${!open && 'scale-0 hidden'}`}>
-          ChatGPT
+          Elser
         </h1>
         <div className={`sidebar__btn-close`} onClick={() => setOpen(!open)}>
           {open ? (
@@ -61,7 +61,7 @@ const SideBar = () => {
             <MdAdd />
           </div>
           <h1 className={`${!open && 'hidden'}`}>创建会话</h1>
-        </span>
+        </span>-
       </div>
 
       <div className='nav__bottom'>

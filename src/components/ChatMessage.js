@@ -15,17 +15,17 @@ import person from '../assets/person.png';
  */
 const ChatMessage = (props) => {
   const { id, createdAt, text, ai = false, selected } = props.message;
-
+  console.log(text)
   return (
     <div
       key={id}
-      className={`${ai && 'flex-row-reverse bg-light-white'} message`}>
+      className={`flex-row-reverse bg-light-white message`}>
       {selected === 'DALL·E' && ai ? (
         <Image url={text} />
       ) : (
         <div className='message__wrapper'>
           <ReactMarkdown
-            className={`message__markdown ${ai ? 'text-left' : 'text-right'}`}
+            className={`message__markdown ${ai ? 'text-left' : 'text-left'}`}
             children={text}
             remarkPlugins={[[remarkGfm, { singleTilde: false }]]}
             components={{
@@ -49,7 +49,7 @@ const ChatMessage = (props) => {
           />
 
           <div
-            className={`${ai ? 'text-left' : 'text-right'} message__createdAt`}>
+            className={`${ai ? 'text-left' : 'text-left'} message__createdAt`}>
             {moment(createdAt).format("YYYY-MM-DD HH:mm:ss")}
           </div>
         </div>

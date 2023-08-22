@@ -17,7 +17,7 @@ const ChatView = () => {
   const inputRef = useRef();
   const [formValue, setFormValue] = useState('');
   const [thinking, setThinking] = useState(false);
-  const options = ['ChatGPT', 'DALL·E'];
+  const options = ['Elser', 'DALL·E'];
   const [selected, setSelected] = useState(options[0]);
   const [messages, addMessage] = useContext(ChatContext);
   const [modalOpen, setModalOpen] = useState(false);
@@ -97,10 +97,13 @@ const ChatView = () => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.shiftKey && e.key === 'Enter') {
+      // 文本换行
+      setFormValue(e.target.value + "  ")
+    } else if (e.key === 'Enter') {
       // 👇 Get input value
       sendMessage(e);
-    }
+    } 
   };
 
   /**
