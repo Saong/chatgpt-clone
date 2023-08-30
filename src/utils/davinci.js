@@ -32,9 +32,11 @@ export const davinci = async (prompt, key) => {
   // });
 
 
-  const url = 'https://openai-elser-eus2.openai.azure.com/openai/deployments/gpt4-elser/chat/completions';
+  const url = 'https://openai-elser-eus2.openai.azure.com/openai/deployments/gpt4-32k-elser/chat/completions';
 
-  const apiVersion = '2023-03-15-preview';
+  // https://openai-elser-eus2.openai.azure.com/openai/deployments/gpt4-32k-elser/chat/completions?api-version=2023-07-01-preview
+
+  const apiVersion = '2023-07-01-preview';
 
   const data = {
     messages: [
