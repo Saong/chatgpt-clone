@@ -32,7 +32,8 @@ export const davinci = async (prompt, key) => {
   // });
 
 
-  const url = 'https://openai-elser-eus2.openai.azure.com/openai/deployments/gpt4-32k-elser/chat/completions';
+  // const url = 'https://openai-elser-eus2.openai.azure.com/openai/deployments/gpt4-32k-elser/chat/completions';
+  const url = 'https://openai-elser-eus2.openai.azure.com/openai/deployments/gpt-35-16k-elser/chat/completions'
 
   // https://openai-elser-eus2.openai.azure.com/openai/deployments/gpt4-32k-elser/chat/completions?api-version=2023-07-01-preview
 
@@ -40,12 +41,6 @@ export const davinci = async (prompt, key) => {
 
   const data = {
     messages: [
-      {
-        role: 'system',
-        content: "你是一位AI助手，需要用markdown格式回答我的问题"
-      },
-      { role: 'user', content: '你好' },
-      { role: 'assistant', content: '你好，我可以帮你什么嘛' },
       { role: 'user', content:  `${prompt}?` },
     ],
     temperature: 0.3,
